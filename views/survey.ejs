@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Popjuar - Survey</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Free HTML Templates" name="keywords">
+  <meta content="Free HTML Templates" name="description">
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/survey.css">
+  <script defer src = "/js/survey.js"></script>
+</head>
+
+<body>
+  <!-- Topbar Start -->
+  <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+          <div class="d-inline-flex align-items-center">
+            <p><i class="fa fa-envelope mr-2"></i>silverkeep555@gmail.com</p>
+            <p class="text-body px-3">|</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</p>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center text-lg-right">
+          <div class="d-inline-flex align-items-center">
+            <a class="text-primary px-3" href="">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="text-primary px-3" href="">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a class="text-primary px-3" href="">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="text-primary px-3" href="">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a class="text-primary pl-3" href="">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+
+
+  <!-- Navbar Start -->
+  <div class="container-fluid position-relative nav-bar p-0">
+    <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+      <%-include('./navbar.ejs')%>
+    </div>
+  </div>
+  <!-- Navbar End -->
+
+
+  <!-- Header Start -->
+  <div class="container-fluid page-header">
+    <div class="container">
+      <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+        <h3 class="display-4 text-white text-uppercase">About</h3>
+        <div class="d-inline-flex text-white">
+          <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+          <i class="fa fa-angle-double-right pt-1 px-3"></i>
+          <p class="m-0 text-uppercase">About</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Header End -->
+  <div class="formbold-main-wrapper">
+    <!-- Author: FormBold Team -->
+    <!-- Learn More: https://formbold.com -->
+    <div class="formbold-form-wrapper">
+      <form action="/survey-submit" method="POST" id = "survey">
+
+        <div class="formbold-input-group">
+          <label for="age" class="formbold-form-label"> Age </label>
+          <input type="text" name="age" id="age" placeholder="Enter your age" class="formbold-form-input" />
+        </div>
+
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            What type of climate do you prefer for your vacation?
+          </label>
+          <select class="formbold-form-select" name="vacation-climate" id="vacation-climate">
+            <option value="unselected" selected>Select vacation climate</option>
+            <option value="Tropical">Tropical</option>
+            <option value="Temperate">Temperate</option>
+            <option value="Cold">Cold</option>
+            <option value="Dry">Dry</option>
+            <option value="Rainy">Rainy</option>
+          </select>
+        </div>
+
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            Where do you live?
+          </label>
+          <input type="text">
+        </div>
+
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            What is your budget for your vacation?
+          </label>
+
+          <select class="formbold-form-select" name="vacation-budget" id="vacation-budget">
+            <option value="unselected" selected>Select budget</option>
+            <option value="Luxury">Luxury</option>
+            <option value="Mid-range">Mid-range</option>
+            <option value="Low">Low</option>
+            <option value="No specific budget">No specific budget</option>
+          </select>
+        </div>
+
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            Do you prefer a relaxing or adventurous vacation?
+          </label>
+
+          <select class="formbold-form-select" name="vacation-style" id="vacation-style">
+            <option value="unselected" selected>Select vacation style</option>
+            <option value="Relaxing">Relaxing</option>
+            <option value="Adventurous">Adventurous</option>
+            <option value="Mix of both">Mix of both</option>
+          </select>
+        </div>
+
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            What type of scenery do you enjoy?
+          </label>
+
+          <select class="formbold-form-select" name="vacation-scenery" id="vacation-scenery">
+            <option value="unselected" selected>Select vacation scenery</option>
+            <option value="Beach">Beach</option>
+            <option value="Mountain">Mountain</option>
+            <option value="Cityscape">Cityscape</option>
+            <option value="Countryside">Countryside</option>
+            <option value="Forest">Forest</option>
+          </select>
+        </div>
+
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            Are you interested in exploring local cuisine and dining options?
+          </label>
+
+          <select class="formbold-form-select" name="vacation-cuisine" id="vacation-cuisine">
+            <option value="unselected" selected>Select cuisine preference</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            What type of cuisine do you prefer?
+          </label>
+          <select class="formbold-form-select" name="cuisine-type" id="cuisine-type">
+            <option value="unselected" selected>Select cuisine type</option>
+            <option value="Italian">Italian</option>
+            <option value="Asian">Asian</option>
+            <option value="Mediterranean">Mediterranean</option>
+            <option value="American">American</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            What is your preferred mode of transportation for your vacation?
+          </label>
+          <select class="formbold-form-select" name="transportation-mode" id="transportation-mode">
+            <option value="unselected" selected>Select transportation mode</option>
+            <option value="Plane">Plane</option>
+            <option value="Train">Train</option>
+            <option value="Car">Car</option>
+            <option value="Boat">Boat</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            What type of water activities are you interested in?
+          </label>
+          <select class="formbold-form-select" name="water-activities" id="water-activities">
+            <option value="unselected" selected>Select water activities</option>
+            <option value="Swimming">Swimming</option>
+            <option value="Snorkeling">Snorkeling</option>
+            <option value="Scuba diving">Scuba diving</option>
+            <option value="Surfing">Surfing</option>
+            <option value="Kayaking">Kayaking</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            What type of winter activities are you interested in?
+          </label>
+          <select class="formbold-form-select" name="winter-activities" id="winter-activities">
+            <option value="unselected" selected>Select winter activities</option>
+            <option value="Skiing">Skiing</option>
+            <option value="Snowboarding">Snowboarding</option>
+            <option value="Ice skating">Ice skating</option>
+            <option value="Snowshoeing">Snowshoeing</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            What is your preferred method of transportation for your vacation?
+          </label>
+          <select class="formbold-form-select" name="transportation" id="transportation">
+            <option value="unselected" selected>Select transportation</option>
+            <option value="Car rental">Car rental</option>
+            <option value="Public transportation">Public transportation</option>
+            <option value="Private transportation">Private transportation</option>
+            <option value="Bicycle">Bicycle</option>
+            <option value="Walk">Walk</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            Do you prefer a well-planned itinerary or a more spontaneous trip?
+          </label>
+          <select class="formbold-form-select" name="itinerary" id="itinerary">
+            <option value="unselected" selected>Select itinerary preference</option>
+            <option value="Well-planned">Well-planned</option>
+            <option value="Spontaneous">Spontaneous</option>
+            <option value="Somewhere in between">Somewhere in between</option>
+          </select>
+        </div>
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            Are you interested in visiting a location known for its outdoor markets or street vendors?
+          </label>
+          <select class="formbold-form-select" name="street-food" id="street-food">
+            <option value="unselected" selected>Select street food preference</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            Are you interested in visiting a location with a strong coffee culture or local coffee shops?
+          </label>
+          <select class="formbold-form-select" name="coffee-culture" id="coffee-culture">
+            <option value="unselected" selected>Select coffee culture preference</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            Do you prefer a location with a bustling city atmosphere or a more laid-back rural environment?
+          </label>
+          <select class="formbold-form-select" name="city-rural" id="city-rural">
+            <option value="unselected" selected>Select city or rural preference</option>
+            <option value="City">City</option>
+            <option value="Rural">Rural</option>
+            <option value="Somewhere in between">Somewhere in between</option>
+          </select>
+        </div>
+
+        <!--newly added begins-->
+        <div class="formbold-input-group">
+          <label class="formbold-form-label">
+            Are you interested in visiting a destination with a rich cultural heritage and history?
+          </label>
+          <select class="formbold-form-select" name="culture-interest" id="culture-interest">
+            <option value="unselected" selected>Select your level of preference</option>
+            <option value="Yes, definitely">Yes, definitely</option>
+            <option value="Somewhat">Somewhat</option>
+            <option value="Not really">Not really</option>
+            <option value="No, not at all">No, not at all</option>
+          </select>
+        </div>
+        <div class="formbold-input-group">
+          <label class = formbold-form-label>
+            Are you interested in visiting a location with unique wildlife, such as a safari destination or nature reserve?
+          </label>
+          <select class="formbold-form-select" name="wildlife-interest" id="wildlife-interest">
+            <option value="unselected" selected>Select your level of preference</option>
+            <option value="Yes, definitely">Yes, definitely</option>
+            <option value="Somewhat">Somewhat</option>
+            <option value="Not really">Not really</option>
+            <option value="No, not at all">No, not at all</option>
+          </select>
+        </div>
+      <div class="formbold-input-group">
+        <label class = formbold-form-label>
+          Do you want to visit a location with plenty of shopping opportunities or artisanal markets?
+        </label>
+        <select class="formbold-form-select" name="shopping-interest" id="shopping-interest">
+          <option value="unselected" selected>Select your level of preference</option>
+          <option value="Yes, definitely">Yes, definitely</option>
+          <option value="Somewhat">Somewhat</option>
+          <option value="Not really">Not really</option>
+          <option value="No, not at all">No, not at all</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          Are you looking for a destination with a variety of accommodation options, such as resorts, villas, or vacation rentals?
+        </label>
+        <select class="formbold-form-select" name="accommodation-interest" id="accommodation-interest">
+          <option value="unselected" selected>Select your level of preference</option>
+          <option value="Yes, definitely">Yes, definitely</option>
+          <option value="Somewhat">Somewhat</option>
+          <option value="Not really">Not really</option>
+          <option value="No, not at all">No, not at all</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          Are you traveling solo, as a couple, or with friends/family?
+        </label>
+        <select class="formbold-form-select" name="travel-group" id="travel-group">
+          <option value="unselected" selected>Select your travel group</option>
+          <option value="Solo">Solo</option>
+          <option value="Couple">Couple</option>
+          <option value="Friends/Family">Friends/Family</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          How important is privacy and seclusion to you, such as private villas or remote cabins?
+        </label>
+        <select class="formbold-form-select" name="privacy-interest" id="privacy-interest">
+          <option value="unselected" selected>Select your level of preference</option>
+          <option value="Very important">Very important</option>
+          <option value="Somewhat important">Somewhat important</option>
+          <option value="Not very important">Not very important</option>
+          <option value="Not important">Not important</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          How important is accessibility to local services, such as hospitals, pharmacies, or emergency services?
+        </label>
+        <select class="formbold-form-select" name="local-services-accessibility" id="local-services-accessibility">
+          <option value="unselected" selected>Select your level of preference</option>
+          <option value="Very important">Very important</option>
+          <option value="Somewhat Important">Somewhat Important</option>
+          <option value="Not very important">Not very important</option>
+          <option value="Not important">Not important</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class = formbold-form-label>
+          Are you interested in visiting amusement parks or other family-friendly attractions?
+        </label>
+        <select class="formbold-form-select" name="attraction-interest" id="attraction-interest">
+          <option value="unselected" selected>Select your level of interest</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          How important is the ability to take day trips or excursions from your vacation spot?
+        </label>
+        <select class="formbold-form-select" name="day-trips-interest" id="day-trips-interest">
+          <option value="unselected" selected>Select your level of preference</option>
+          <option value="Very important">Very important</option>
+          <option value="Somewhat important">Somewhat important</option>
+          <option value="Not very important">Not very important</option>
+          <option value="Not important">Not important</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          Do you have any dietary restrictions?
+        </label>
+        <select class="formbold-form-select" name="diet-restrictions" id="diet-restrictions">
+          <option value="unselected" selected>Select which dietary restriction you may have</option>
+          <option value="Vegan">Vegan</option>
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Glucose Intolerant">Glucose Intolerant</option>
+          <option value="Lactose Intolerant">Lactose Intolerant</option>
+          <option value="Kosher">Kosher</option>
+          <option value="None">None</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          Do you prefer vacation spots that offer organic or locally-sourced food options?
+        </label>
+        <select class="formbold-form-select" name="food-preference" id="food-preference">
+          <option value="unselected" selected>Select food preference</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          Do you prefer to travel domestically or internationally?
+        </label>
+        <select class="formbold-form-select" name="distance-preference" id="distance-preference">
+          <option value="unselected" selected>Select distance preference</option>
+          <option value="International">International</option>
+          <option value="Domestic">Domestic</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          Are you interested in participating in any volunteering or eco-tourism opportunities during your trip?
+        </label>
+        <select class="formbold-form-select" name="volunteer-opportunity" id="volunteer-opportunity">
+          <option value="unselected" selected>Select your answer</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          Do you prefer a destination with a historical or modern aesthetic?
+        </label>
+        <select class="formbold-form-select" name="aesthetic-preference" id="aesthetic-preference">
+          <option value="unselected" selected>Select your preference</option>
+          <option value="Historical">Historical</option>
+          <option value="Modern">Modern</option>
+          <option value="Both">Both</option>
+          <option value="Neither">Neither</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          Are you interested in experiencing any traditional or indigenous cultural practices during your trip, such as a tea ceremony or traditional dance performance?
+        </label>
+        <select class="formbold-form-select" name="cultural-experience" id="cultural-experience">
+          <option value="unselected" selected>Select your answer</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          How important is it for you to have opportunities for outdoor activities, such as hiking or kayaking, during your trip?
+        </label>
+        <select class="formbold-form-select" name="outdoor-activity-interest" id="outdoor-activity-interest">
+          <option value="unselected" selected>Select your level of preference</option>
+          <option value="Very important">Very important</option>
+          <option value="Somewhat important">Somewhat important</option>
+          <option value="Not very important">Not very important</option>
+          <option value="Not important">Not important</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          How important is it for you to be able to communicate easily with locals, either through a shared language or translation services?
+        </label>
+        <select class="formbold-form-select" name="communication-importance" id="communication-importance">
+          <option value="unselected" selected>Select your level of importance</option>
+          <option value="Very important">Very important</option>
+          <option value="Somewhat important">Somewhat important</option>
+          <option value="Not very important">Not very important</option>
+          <option value="Not important">Not important</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          Are you interested in experiencing any local festivals or events during your trip, such as a carnival or cultural celebration?
+        </label>
+        <select class="formbold-form-select" name="local-festivals" id="local-festivals">
+          <option value="unselected" selected>Select your answer</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          Are you interested in visiting any museums or art galleries during your trip, to learn more about the local culture and history?
+        </label>
+        <select class="formbold-form-select" name="museums-galleries" id="museums-galleries">
+          <option value="unselected" selected>Select your answer</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          Are you interested in visiting religious sites or landmarks?
+        </label>
+        <select class="formbold-form-select" name="religious-sites" id="religious-sites">
+          <option value="unselected" selected>Select your answer</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="formbold-input-group">
+        <label class="formbold-form-label">
+          How important is it for you to have access to shopping or markets, to purchase souvenirs or local goods, during your trip?
+        </label>
+        <select class="formbold-form-select" name="shopping-importance" id="shopping-importance">
+          <option value="unselected" selected>Select your answer</option>
+          <option value="Very important">Very important</option>
+          <option value="Somewhat important">Somewhat important</option>
+          <option value="Not very important">Not very important</option>
+          <option value="Not important">Not important</option>
+        </select>
+      </div>
+
+      <!--newly added ends-->
+
+        <button class="formbold-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+    <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+            <a href="" class="navbar-brand">
+                <h1 class="text-primary"><span class="text-white">POP</span>JUAR</h1>
+            </a>
+            <p>Popjuar is a top travel agency that offers customized travel experiences with exceptional service, personalized attention, competitive prices, and 24/7 customer support.</p>
+            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+            <div class="d-flex justify-content-start">
+                <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+            <div class="d-flex flex-column justify-content-start">
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
+                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
+            <div class="d-flex flex-column justify-content-start">
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
+                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
+                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>1081 Innovation Way, California, USA</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>+615 889 0972</p>
+            <p><i class="fa fa-envelope mr-2"></i>silverkeep555@gmail.com</p>
+            <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
+            <div class="w-100">
+                <div class="input-group">
+                    <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary px-3">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+    <div class="row">
+        <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+            <p class="m-0 text-white-50">Copyright &copy; <a href="#">Domain</a>. All Rights Reserved.</a>
+            </p>
+        </div>
+        <div class="col-lg-6 text-center text-md-right">
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/tempusdominus/js/moment.min.js"></script>
+  <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+  <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+  <!-- Contact Javascript File -->
+  <script src="mail/jqBootstrapValidation.min.js"></script>
+  <script src="mail/contact.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
